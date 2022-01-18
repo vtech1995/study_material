@@ -1,0 +1,19 @@
+arp 
+dig 
+ifconfig 
+ipconfig
+iptables
+netstat
+nmap
+nslookup
+pathping
+route
+tcpdump
+tracert
+
+
+bandwidth speed tester 
+packet sniffer
+port scanners
+protocole analyzer
+wifi analyzer
