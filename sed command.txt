@@ -1,0 +1,60 @@
+sed -n '/15:50:00,/16:00:00/p' server.log > /tmp/isis.log
+sed -n '/pattern1/,/pattern2/' file > /tmp/file
+
+
+cat tac wc head tail 
+sed grep egrep fgrep cut awk sort uniq find tar 
+
+
+sed <stream editor >
+operations:- 
+print
+find and replace 
+delete
+before the line number we can insert anything 
+After the line number we can append anything 
+
+
+sed 'action' filename
+command | sed 'action'
+
+==============================================================================
+print line numbers using sed 
+sed '1p' /etc/passwd 
+sed -n '1p' /etc/passwd
+sed -n '1p;5p' /etc/passwd
+sed -n '1,5p' /etc/passwd
+sed -n '$p' /etc/passwd
+sed -n '1p;$p' /etc/passwd
+sed -n  '31,35p' /etc/passwd <you can play with range of expressions>
+sed -n '1,5p;11,15p;21p;25p;31,35' /etc/passwd
+
+cat -n /etc/passwd | sed -n '31p'  > /tmp/info 
+================================================================================
+
+find and replace anything into file 
+
+lscpu | cat -n | sed -n '1,3p'
+lsblk | cat -n  | sed -n '1,3p'
+
+
+sed 
+
+operations:- 
+p for print 
+s for substitute 
+g for global
+i for ignore caseSensative
+
+
+sed 's/root/network/g' sample  <the changes output is only on screen>
+sed 's/root/network/g2' sample  <replace after 2nd count in everyline>
+sed -i -e 's/root/network/g2' -e 's/root/network/g' sample < make multi replace -e in original file -i >
+sed '5s/^/#' sample  < ^ is used for starting of line>
+sed '5s/^#/' sample 
+cat -n sample | sed -n '7!p' <print all lines other than 7 >
+
+
+
+
+
